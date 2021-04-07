@@ -5,26 +5,34 @@
 {% block content %}
 
 {% include 'includes/navbar.html' %}
-{% image self.home_page_background_image fill-1920x1080 as homepage_bg_img %}
 
-<!-- style="background: url('{{ homepage_bg_img.url }}');" -->
+
 <div class="home-page-container flexed">
-    <div class="jumbotron flexed jumbotron-fluid">
-        <h1 class="display-6 home-page-jumbotron-title">{{ self.page_title }}</h1>
-        <!-- <p class="lead">{{ self.page_subtitle|richtext }}</p> -->
-        <hr class="my-4">
-        <p class="home-page-jumbotron-description">{{ self.page_description|richtext }}</p>
-        <p class="lead">
-          
-          {% if self.home_page_CTA_button %}
-          <a class="big-btn-style" href="#" role="button">{{ self.home_page_cta_button_label }}</a>
-          {% else %}
-          <p>No Button</p>
-          {% endif %}
-              
-        </p>
-      </div>
+
+  <!-- {% image self.home_page_background_image fill-960x335 as homepage_bg_img %}
+  <div class="home-page-top-bg-img" style="background: url('{{ homepage_bg_img.url }}');"></div> -->
+
+  <div class="jumbotron flexed jumbotron-fluid">
+
+    <h1 class="display-6 home-page-jumbotron-title">{{ self.page_title }}</h1>
+    <!-- <p class="lead">{{ self.page_subtitle|richtext }}</p> -->
+    <p class="home-page-jumbotron-description">{{ self.page_description|richtext }}</p>
+    <p class="lead">
+
+      {% if self.home_page_CTA_button %}
+      <a class="big-btn-style home-page-view-work-btn" href="#" role="button">
+        {{ self.home_page_cta_button_label }}</a>
+      {% else %}
+      <p>No Button</p>
+      {% endif %}
+
+    </p>
+  </div>
+
+
 </div>
-    
+
+
+
+
 {% endblock content %}
-    
