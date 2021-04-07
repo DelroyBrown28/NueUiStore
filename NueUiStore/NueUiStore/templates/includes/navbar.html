@@ -1,0 +1,25 @@
+{% load wagtailcore_tags wagtailimages_tags %}
+
+<nav>
+    <div class="nav-wrapper">
+      <a class="brand-logo navbar-logo-link" href="#!">
+        {% image self.navbar_logo fill-65x40 as navbar_logo %}
+        <img src="{{ navbar_logo.url }}" class="navbar-logo-img" alt="Arinze Stanley Logo">
+      </a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="{{ navbar_link_1.url }}">{{ self.navbar_link_text_1 }}</a></li>
+        <li><a href="{{ navbar_link_2.url }}">{{ self.navbar_link_text_2 }}</a></li>
+        <li><a href="{{ navbar_link_3.url }}">{{ self.navbar_link_text_3 }}</a></li>
+        <li><a href="{{ navbar_link_4.url }}">{{ self.navbar_link_text_4 }}</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <ul class="sidenav" id="mobile-demo">
+    <li><a href="{{ navbar_link_1.url }}">{{ self.navbar_link_text_1 }}</a></li>
+    <li><a href="{{ navbar_link_2.url }}">{{ self.navbar_link_text_2 }}</a></li>
+    <li><a href="{{ navbar_link_3.url }}">{{ self.navbar_link_text_3 }}</a></li>
+    <li><a href="{{ navbar_link_4.url }}">{{ self.navbar_link_text_4 }}</a></li>
+  </ul>
+       

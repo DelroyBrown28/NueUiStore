@@ -1,0 +1,88 @@
+/* 
+=======
+HELPERS
+=======
+*/
+a {
+    text-decoration: none;
+}
+.flexed {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.redborder {
+    border: 1px solid red;
+}
+
+.blueborder {
+    border: 1px solid blue;
+}
+
+.big-btn-style {
+    width: 300px;
+    padding: 10px 55px;
+    border: 1px solid #f7f7f7;
+    color: #f7f7f7;
+}
+
+.big-btn-style:hover {
+    transform: translateY(50px);
+
+}
+
+
+
+body,
+html {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    background-color: #222;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* 
+======
+NAVBAR
+======
+*/
+
+nav {
+    background-color: #222;
+    box-shadow: none;
+    padding: 0px 15px;
+}
+
+.navbar-logo-link {
+    width: fit-content;
+    background-size: contain;
+}
+
+
+/* 
+========================
+HOME PAGE JUMBOTRON AREA
+========================
+*/
+
+.home-page-container {
+    height: calc(100% - 64px);
+    color: #f7f7f7;
+}
+
+.jumbotron {
+    width: 50%;
+    height: fit-content;
+    flex-flow: column;
+}
+
+.home-page-jumbotron-title {
+    font-family: 'Bebas Neue', cursive;
+
+}
+
+.jumbotron p {
+    text-align: center;
+}
