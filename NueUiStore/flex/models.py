@@ -26,8 +26,6 @@ class FlexPage(Page):
     content_panels = Page.content_panels + [
         FieldPanel('page_title'),
         StreamFieldPanel('all_block_content'),
-
-
     ]
 
     class Meta:

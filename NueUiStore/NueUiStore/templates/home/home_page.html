@@ -4,7 +4,6 @@
 
 {% block content %}
 
-{% include 'includes/navbar.html' %}
 
 
 <div class="home-page-container flexed">
@@ -20,7 +19,7 @@
     <p class="lead">
 
       {% if self.home_page_CTA_button %}
-      <a class="big-btn-style home-page-view-work-btn" href="#" role="button">
+      <a class="big-btn-style home-page-view-work-btn" href="{{ self.home_page_CTA_button.url }}" role="button">
         {{ self.home_page_cta_button_label }}</a>
       {% else %}
       <p>No Button</p>
@@ -32,8 +31,10 @@
 </div>
 
 
+
 {% for block in page.all_block_content  %}
 {% include_block block %}
 {% endfor %}
 
 {% endblock content %}
+
