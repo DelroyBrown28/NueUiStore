@@ -1,9 +1,11 @@
 from django.db import models
 
+from blocks import blocks
 from wagtail.core.models import Page
-from wagtail.core.fields import RichTextField
+from wagtail.core.fields import RichTextField, StreamField
 from wagtail.admin.edit_handlers import (FieldPanel, PageChooserPanel,
                                             MultiFieldPanel,
+                                            StreamFieldPanel,
                                             InlinePanel,
                                             FieldRowPanel)
 from wagtail.images.edit_handlers import ImageChooserPanel
@@ -31,6 +33,17 @@ class HomePage(Page):
         related_name="+"
    )
     home_page_cta_button_label = models.CharField(max_length=25, blank=False, null=False)
+
+    all_block_content = StreamField(
+        [
+            ('title_and_text', blocks.TitleAndTextBlock()),
+            ('full_richtext', blocks.RichtextBlock()),
+            ('art_cards', blocks.ArtBlock()),
+            ('cta', blocks.CTABlock()),
+        ],
+        null=True,
+        blank=True
+    )
 
     """Navbar Stuff."""
     navbar_logo = models.ForeignKey(
@@ -73,6 +86,15 @@ class HomePage(Page):
     )
     navbar_link_text_4 = models.CharField(max_length=25, help_text='Navbar Text', blank=True, null=True, default='Nav Text 4')
     
+    art_card_content = StreamField(
+        [
+            ("full_richtext", blocks.RichtextBlock()),
+            ("art_cards", blocks.ArtBlock()),
+            
+        ],
+        null=True,
+        blank=True
+    )
     content_panels = Page.content_panels + [
         FieldPanel("page_title"),
         FieldPanel("page_subtitle"),
@@ -80,6 +102,7 @@ class HomePage(Page):
         ImageChooserPanel("home_page_background_image"),
         PageChooserPanel("home_page_CTA_button"),
         FieldPanel("home_page_cta_button_label"),
+        StreamFieldPanel("art_card_content"),
         # Navbar Stuff
         ImageChooserPanel('navbar_logo'),
         MultiFieldPanel([
@@ -100,9 +123,11 @@ class HomePage(Page):
                 PageChooserPanel('navbar_link_4'),
             ]),
         ], heading='Navbar Links'),
-    ]
+            StreamFieldPanel("all_block_content"),
 
+    ]
 
     class Meta:
         verbose_name = "Home Page"
         verbose_name_plural = "Home Pages"
+

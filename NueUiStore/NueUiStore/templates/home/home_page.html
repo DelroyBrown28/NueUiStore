@@ -28,11 +28,12 @@
 
     </p>
   </div>
-
-
+  
 </div>
 
 
-
+{% for block in page.all_block_content  %}
+{% include_block block %}
+{% endfor %}
 
 {% endblock content %}

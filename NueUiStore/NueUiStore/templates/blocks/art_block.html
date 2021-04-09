@@ -1,0 +1,25 @@
+{% load wagtailimages_tags %}
+
+<div class="container">
+    {% for art_card in self.art_cards %}
+    <div class="card-deck">
+        <div class="card">
+            {% image art_card.image fill-300x200 as img %}
+            <img src="{{ img.url }}" alt="{{ img.alt }}" class="card-img-top" />
+            <div class="card-body">
+                <h5 class="card-title">{{ art_card.title_of_picture }}</h5>
+                <p class="card-text">{{ art_card.picture_description }}</p>
+                {% if art_card.button_page %}
+                <a href="{{ art_card.button_page.url }}" class="btn btn-primary">
+                    Learn More
+                </a>
+                {% elif art_card.button_url %}
+                <a href="{{ art_card.button_url }}" class="btn btn-primary">
+                    Learn More
+                </a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
