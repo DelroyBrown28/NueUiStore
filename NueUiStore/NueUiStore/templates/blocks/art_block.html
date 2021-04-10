@@ -1,25 +1,39 @@
 {% load wagtailimages_tags %}
 
-<div class="container">
+<h4 id="featuredArt" class="home-page-art-title">{{ self.gallery_block_title }}</h4>
+
+<div class="art-cards-wrap flexed">
     {% for art_card in self.art_cards %}
-    <div class="card-deck">
-        <div class="card">
-            {% image art_card.image fill-300x200 as img %}
+    <div class="card art-cards ml-2 mr-2">
+        <div class="card-image waves-effect waves-block waves-light">
+            {% image art_card.image fill-600x400 as img %}
             <img src="{{ img.url }}" alt="{{ img.alt }}" class="card-img-top" />
-            <div class="card-body">
-                <h5 class="card-title">{{ art_card.title_of_picture }}</h5>
-                <p class="card-text">{{ art_card.picture_description }}</p>
-                {% if art_card.button_page %}
-                <a href="{{ art_card.button_page.url }}" class="btn btn-primary">
-                    Learn More
+        </div>
+        <div class="card-content">
+            <!-- <span class="card-title art-card-title activator">{{ art_card.title_of_picture }}</span> -->
+            <!-- <p class="art-card-description">{{ art_card.picture_description }}</p> -->
+
+
+            
+            <!-- <div class="flexed art-card-button-wrap">
+                {% if art_card.button_to_site_page %}
+                <a href="{{ art_card.button_to_site_page.url }}" class="mt-3 art-card-view-btn flexed">
+                    {{ art_card.button_text }}
                 </a>
-                {% elif art_card.button_url %}
-                <a href="{{ art_card.button_url }}" class="btn btn-primary">
+                {% elif art_card.button_to_external_URL %}
+                <a href="{{ art_card.button_to_external_URL }}" class="mt-3 art-card-view-btn flexed">
                     Learn More
                 </a>
                 {% endif %}
-            </div>
+            </div> -->
         </div>
+        <!-- <div class="card-reveal">
+            <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+            <p>Here is some more information about this product that is only revealed once clicked on.</p>
+        </div> -->
     </div>
+    
+    
+    
     {% endfor %}
 </div>

@@ -27,7 +27,7 @@ class RichtextBlock(blocks.RichTextBlock):
         
 
 class ArtBlock(blocks.StructBlock):
-    # title_of_picture = blocks.RichTextBlock(required=True)
+    gallery_block_title = blocks.RichTextBlock(required=True)
 
     art_cards = blocks.ListBlock(
         blocks.StructBlock(

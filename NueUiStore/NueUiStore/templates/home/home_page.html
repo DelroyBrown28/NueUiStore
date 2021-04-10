@@ -19,22 +19,31 @@
     <p class="lead">
 
       {% if self.home_page_CTA_button %}
-      <a class="big-btn-style home-page-view-work-btn" href="{{ self.home_page_CTA_button.url }}" role="button">
-        {{ self.home_page_cta_button_label }}</a>
+      <!-- <a class="big-btn-style home-page-view-work-btn" href="{{ self.home_page_CTA_button.url }}" role="button">
+        {{ self.home_page_cta_button_label }}
+      </a> -->
+      <a class="big-btn-style home-page-view-work-btn" href="#featuredArt" role="button">
+        ↓↓↓↓↓
+
+      </a>
       {% else %}
       <p>No Button</p>
       {% endif %}
 
     </p>
   </div>
-  
-</div>
 
+</div>
 
 
 {% for block in page.all_block_content  %}
 {% include_block block %}
 {% endfor %}
+<section>
+  {% for block in page.art_card_content  %}
+  {% include_block block %}
+  {% endfor %}
+</section>
+
 
 {% endblock content %}
-

@@ -113,6 +113,51 @@ ART CARD AREA
 =============
 */
 
-.art-card-section {
+.art-cards-wrap {
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.art-cards {
+    border-radius: 0;
+    height: fit-content;
+    width: fit-content;
+    background-color: transparent;
+    color: #f7f7f7;
+    border: none;
+    box-shadow: none;
+}
+
+.art-card-title {
+    color: #f7f7f7;
+}
+
+.card-content p {
+    color: #222;
+}
+
+.art-card-button-wrap {
+    height: fit-content;
+}
+
+.art-card-button-wrap button {
+    width: 100%;
     height: 100%;
+}
+
+.art-card-button-wrap a {
+    width: 100%;
+    padding: 0;
+    background-color: transparent;
+    color: #333;
+}
+
+.art-card-view-btn {
+    height: 45px;
+    width: 100px;
+    border: 1px dashed #222;
+}
+
+.home-page-art-title {
+    text-align: center;
 }
