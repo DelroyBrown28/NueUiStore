@@ -39,6 +39,26 @@ html {
     font-family: 'Poppins', sans-serif;
 }
 
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #222;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
 /* 
 ======
 NAVBAR
@@ -115,6 +135,7 @@ ART CARD AREA
 
 .art-cards-wrap {
     width: 100%;
+    height: calc(100vh - 64px);
     flex-wrap: wrap;
 }
 
@@ -188,17 +209,66 @@ ART CARD AREA
 }
 
 /* 
+======================
+ARTIST FEATURE SECTION
+======================
+*/
+
+.artist-feature-section {
+    height: 100vh;
+    padding: 15px 52px;
+
+}
+
+.artists-feature-columns {
+    height: 100%;
+}
+
+.artist-feature-img-wrap {
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+}
+
+.artist-feature-description-wrap {
+    flex-flow: column;
+    padding: 15px;
+}
+
+.artist-description-text {
+    flex-flow: column;
+    margin: 30px 0px;
+
+}
+
+.artist-description-text p {
+    font-weight: 300;
+}
+
+.artist-feature-description-wrap span {
+    width: 75%;
+}
+
+
+
+
+
+
+
+
+/* 
 ================
 HOVERS AND STUFF
 ================
 */
 
 
-.art-cards >.hidden-info-card:hover {
+.art-cards>.hidden-info-card:hover {
     opacity: 1;
     transition: 0.5s ease;
 
 }
+
 /* .art-cards >.art-card-image:hover {
     transform: translateX(-15px) translateY(-25px);
     box-shadow:
