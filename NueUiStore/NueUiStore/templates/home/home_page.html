@@ -5,6 +5,38 @@
 {% block content %}
 
 
+<div class="container">
+  {% for product in products  %}
+  <div class="row">
+      <div class="col-sm-4">
+          {% image product.product_image fill-250x250 as product_img %}
+          <a href="{{ product.url }}">
+              <img src="{{ product_img.url }}" alt="{{ product_img.alt }}">
+
+          </a>
+      </div>
+      <div class="col-sm-8">
+          <a href="{{ product.url }}">
+              {{ product.custom_title }}
+
+          </a>
+      </div>
+
+
+
+  </div>{% endfor %}
+</div>
+
+{% for block in page.all_block_content  %}
+{% include_block block %}
+{% endfor %}
+<section>
+  {% for block in page.art_card_content  %}
+  {% include_block block %}
+  {% endfor %}
+</section>
+
+
 
 <div class="home-page-container flexed">
 
@@ -34,16 +66,5 @@
   </div>
 
 </div>
-
-
-{% for block in page.all_block_content  %}
-{% include_block block %}
-{% endfor %}
-<section>
-  {% for block in page.art_card_content  %}
-  {% include_block block %}
-  {% endfor %}
-</section>
-
 
 {% endblock content %}

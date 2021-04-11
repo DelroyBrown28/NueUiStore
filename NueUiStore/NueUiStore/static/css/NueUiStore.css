@@ -48,7 +48,7 @@ NAVBAR
 nav {
     background-color: transparent;
     box-shadow: none;
-    padding: 0px 15px;
+    padding: 0px 52px;
 
 }
 
@@ -119,6 +119,7 @@ ART CARD AREA
 }
 
 .art-cards {
+    position: relative;
     border-radius: 0;
     height: fit-content;
     width: fit-content;
@@ -126,38 +127,87 @@ ART CARD AREA
     color: #f7f7f7;
     border: none;
     box-shadow: none;
+
+}
+
+
+
+.hidden-info-card {
+    /* top: 0; */
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #f7f7f741;
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    flex-flow: column;
+    z-index: 100;
 }
 
 .art-card-title {
-    color: #f7f7f7;
+    bottom: 0px;
+    left: 10px;
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 5px;
+    position: absolute;
+    color: #222;
 }
+
+.hidden-info-text-btn-wrap {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    flex-flow: column;
+    padding: 0px 15px;
+    color: #222;
+    font-size: 1.7rem;
+    font-weight: 600;
+    /* justify-content: space-evenly; */
+}
+
+.art-card-store-btn {
+    background-color: rgb(116, 182, 116);
+    color: #222;
+    padding: 5px 25px;
+    font-weight: 400;
+    font-size: 1.3rem;
+}
+
+
 
 .card-content p {
     color: #222;
 }
 
-.art-card-button-wrap {
-    height: fit-content;
-}
 
-.art-card-button-wrap button {
-    width: 100%;
-    height: 100%;
-}
-
-.art-card-button-wrap a {
-    width: 100%;
-    padding: 0;
-    background-color: transparent;
-    color: #333;
-}
-
-.art-card-view-btn {
-    height: 45px;
-    width: 100px;
-    border: 1px dashed #222;
-}
 
 .home-page-art-title {
     text-align: center;
 }
+
+/* 
+================
+HOVERS AND STUFF
+================
+*/
+
+
+.art-cards >.hidden-info-card:hover {
+    opacity: 1;
+    transition: 0.5s ease;
+
+}
+/* .art-cards >.art-card-image:hover {
+    transform: translateX(-15px) translateY(-25px);
+    box-shadow:
+        0 0px 2.2px rgba(0, 0, 0, 0.02),
+        0 0px 5.3px rgba(0, 0, 0, 0.028),
+        0 0px 10px rgba(0, 0, 0, 0.035),
+        0 0px 17.9px rgba(0, 0, 0, 0.042),
+        0 0px 33.4px rgba(0, 0, 0, 0.05),
+        0 0px 80px rgba(0, 0, 0, 0.07);
+    transition: 0.3s ease;
+
+} */
