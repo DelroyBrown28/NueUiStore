@@ -131,16 +131,6 @@ HOME PAGE JUMBOTRON AREA
 
 
 
-.jumbotron {
-    position: relative;
-    width: 960px;
-    height: 335px;
-    height: fit-content;
-    flex-flow: column;
-    padding: 25px 0px;
-    border-top: 2px dashed #f7f7f7;
-    border-bottom: 2px dashed #f7f7f7;
-}
 
 .home-page-jumbotron-title {
     font-family: 'Bebas Neue', cursive;
@@ -155,12 +145,6 @@ HOME PAGE JUMBOTRON AREA
     filter: brightness(20%);
 }
 
-.jumbotron p {
-    text-align: center;
-    margin: 15px 0px;
-    width: 65%;
-    font-weight: 200 !important;
-}
 
 /* 
 =============
@@ -242,9 +226,13 @@ ART CARD AREA
 
 
 .home-page-art-title {
-    text-align: center;
+    font-weight: 300;
+    padding-left: 52px;
 }
 
+.art-card-section {
+    padding: 15px 0px;
+}
 /* 
 ======================
 ARTIST FEATURE SECTION
@@ -319,6 +307,26 @@ CTA SECTION
     background-repeat: no-repeat !important;
     background-size: cover !important;
 }
+
+/* 
+=======================
+LARGE JUMBOTRON SECTION
+=======================
+*/
+
+.large-jumbotron-section {
+    height: 100vh;
+}
+
+.large-jumbotron-columns-wrap {
+    height: 100%;
+
+}
+
+.large-jumbotron-columns {
+    height: 100%;
+}
+
 
 /* 
 ================

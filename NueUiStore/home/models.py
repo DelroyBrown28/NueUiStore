@@ -81,6 +81,8 @@ class HomePage(Page):
             ('full_richtext', blocks.RichtextBlock()),
             ('art_cards', blocks.ArtBlock()),
             ('cta', blocks.CTABlock()),
+            ('large_jumbotron', blocks.LargeJumbotronBlock()),
+
         ],
         null=True,
         blank=True
@@ -101,6 +103,7 @@ class HomePage(Page):
         ImageChooserPanel("home_page_background_image"),
         PageChooserPanel("home_page_CTA_button"),
         FieldPanel("home_page_cta_button_label"),
+        StreamFieldPanel("all_block_content"),
         StreamFieldPanel("art_card_content"),
         # Navbar Stuff
         ImageChooserPanel('navbar_logo'),
@@ -122,7 +125,7 @@ class HomePage(Page):
                 PageChooserPanel('navbar_link_4'),
             ]),
         ], heading='Navbar Links'),
-            StreamFieldPanel("all_block_content"),
+            
 
     ]
 

@@ -61,7 +61,20 @@ class CTABlock(blocks.StructBlock):
 
     class Meta:
         template = 'blocks/cta_block.html'
-        icon = 'placeholder'
+        icon = 'image'
         label = 'Call To Action'
 
+
+class LargeJumbotronBlock(blocks.StructBlock):
+    jumbotron_title = blocks.CharBlock(required=True, max_length=100)
+    jumbotron_text = blocks.RichTextBlock(required=True, features=['bold', 'italic'])
+    jumbotron_image = ImageChooserBlock(required=True)
+    jumbotron_button_page = blocks.PageChooserBlock(required=False) 
+    jumbotron_button_url = blocks.URLBlock(required=False)
+    jumbotron_button_text = blocks.CharBlock(required=False, default='Learn More', max_length=40)
+   
+    class Meta:
+        template = 'blocks/large_jumbotron_block.html'
+        icon = 'image'
+        label = 'Large Jumbotron'
 

@@ -16,6 +16,7 @@ class FlexPage(Page):
             ('full_richtext', blocks.RichtextBlock()),
             ('art_cards', blocks.ArtBlock()),
             ('cta', blocks.CTABlock()),
+            ('large_jumbotron', blocks.LargeJumbotronBlock()),
         ],
         null=True,
         blank=True
