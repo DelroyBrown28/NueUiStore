@@ -52,6 +52,7 @@ class ArtBlock(blocks.StructBlock):
 class CTABlock(blocks.StructBlock):
     title = blocks.CharBlock(required=True, max_length=100)
     text = blocks.RichTextBlock(required=True, features=['bold', 'italic'])
+    cta_image = ImageChooserBlock(required=True)
     button_page = blocks.PageChooserBlock(required=False) 
     button_url = blocks.URLBlock(required=False)
     button_text = blocks.CharBlock(required=False, default='Learn More', max_length=40)

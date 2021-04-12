@@ -34,17 +34,6 @@ class HomePage(Page):
    )
     home_page_cta_button_label = models.CharField(max_length=25, blank=False, null=False)
 
-    all_block_content = StreamField(
-        [
-            ('title_and_text', blocks.TitleAndTextBlock()),
-            ('full_richtext', blocks.RichtextBlock()),
-            ('art_cards', blocks.ArtBlock()),
-            ('cta', blocks.CTABlock()),
-        ],
-        null=True,
-        blank=True
-    )
-
     """Navbar Stuff."""
     navbar_logo = models.ForeignKey(
         "wagtailimages.Image",
@@ -86,6 +75,16 @@ class HomePage(Page):
     )
     navbar_link_text_4 = models.CharField(max_length=25, help_text='Navbar Text', blank=True, null=True, default='Nav Text 4')
     
+    all_block_content = StreamField(
+        [
+            ('title_and_text', blocks.TitleAndTextBlock()),
+            ('full_richtext', blocks.RichtextBlock()),
+            ('art_cards', blocks.ArtBlock()),
+            ('cta', blocks.CTABlock()),
+        ],
+        null=True,
+        blank=True
+    )
     art_card_content = StreamField(
         [
             ("full_richtext", blocks.RichtextBlock()),

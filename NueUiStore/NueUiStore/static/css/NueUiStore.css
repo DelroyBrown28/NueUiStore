@@ -24,8 +24,14 @@ a {
 .big-btn-style {
     width: 300px;
     padding: 10px 55px;
-    border: 1px solid #f7f7f7;
+    border: 1px dashed #f7f7f7;
     color: #f7f7f7;
+}
+.big-btn-style-dark {
+    width: 300px;
+    padding: 10px 55px;
+    border: 1px dashed #222;
+    color: #222;
 }
 
 
@@ -78,6 +84,30 @@ nav {
 
 .navbar-logo-link {
     background-size: contain;
+}
+
+
+/* 
+======
+FOOTER
+======
+*/
+
+.main-footer {
+    height: 200px;
+    padding: 0px 52px;
+}
+
+.footer-links-wrap {
+    height: 100%;
+    justify-content: space-between;
+}
+
+.footer-links {
+    height: 150px;
+    width: 150px;
+    border: 2px dashed #f7f7f7;
+    border-radius: 50%;
 }
 
 
@@ -147,6 +177,8 @@ ART CARD AREA
     background-color: transparent;
     color: #f7f7f7;
     border: none;
+    border-left: 0.5px dashed #222;
+    border-right: 0.5px dashed #222;
     box-shadow: none;
 
 }
@@ -216,6 +248,7 @@ ARTIST FEATURE SECTION
 
 .artist-feature-section {
     height: 100vh;
+    flex-wrap: wrap;
     padding: 15px 52px;
 
 }
@@ -251,10 +284,35 @@ ARTIST FEATURE SECTION
 
 
 
+/* 
+===========
+CTA SECTION
+===========
+*/
 
+.cta-wrap {
+    height: 350px;
+    padding: 0px 52px;
+    margin-top: 100px;
+    color: #222;
+}
 
+.text-btn-wrap {
+    height: 100%;
+    flex-flow: column;
+    background-color: #f7f7f7;
+}
 
+.text-btn-wrap p {
+    width: 50%;
+}
 
+.cta-img {
+    height: 100%;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+}
 
 /* 
 ================
