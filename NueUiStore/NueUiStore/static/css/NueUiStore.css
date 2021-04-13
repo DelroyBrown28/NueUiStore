@@ -231,18 +231,44 @@ ART CARD AREA
 }
 
 .art-card-section {
-    padding: 15px 0px;
+    padding: 0px;
 }
+
 /* 
 ======================
 ARTIST FEATURE SECTION
 ======================
 */
 
+.about-page-close-btn {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    top: 50px;
+    right: 160px;
+    background-color: transparent;
+    color: #f7f7f7;
+    border-radius: 50%;
+    font-size: 4rem;
+    cursor: pointer;
+    /* REESET BY GSAP */
+    visibility: hidden;
+}
+
+.about-page-close-btn p {
+    margin: 0;
+
+}
+
+
+
 .artist-feature-section {
-    height: 100vh;
+    position: absolute;
+    height: 90vh;
     flex-wrap: wrap;
     padding: 15px 52px;
+
+    visibility: hidden;
 
 }
 
@@ -255,6 +281,10 @@ ARTIST FEATURE SECTION
     background-position: center !important;
     background-repeat: no-repeat !important;
     background-size: cover !important;
+}
+
+.artist-feature-img {
+    height: 95%;
 }
 
 .artist-feature-description-wrap {
@@ -270,6 +300,7 @@ ARTIST FEATURE SECTION
 
 .artist-description-text p {
     font-weight: 300;
+    /* font-size: 3rem; */
 }
 
 .artist-feature-description-wrap span {
@@ -329,9 +360,9 @@ LARGE JUMBOTRON SECTION
 
 
 /* 
-================
-HOVERS AND STUFF
-================
+====================
+HOVERS AND KEYFRAMES
+====================
 */
 
 
@@ -339,6 +370,25 @@ HOVERS AND STUFF
     opacity: 1;
     transition: 0.5s ease;
 
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+
+        transform: rotate(360deg);
+    }
+}
+
+.about-page-close-btn p:hover {
+    color: red;
+    transition: 0.3s;
+    animation-name: spin;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
 }
 
 @media (max-width: 1385px) {
