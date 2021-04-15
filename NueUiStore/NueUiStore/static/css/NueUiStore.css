@@ -259,12 +259,10 @@ ARTIST FEATURE SECTION
 
 
 .artist-feature-section {
-    position: absolute;
     height: 90vh;
     flex-wrap: wrap;
     padding: 15px 52px;
 
-    visibility: hidden;
 
 }
 

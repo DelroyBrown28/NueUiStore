@@ -1,6 +1,6 @@
 from django.db import models
 
-from wagtail.admin.edit_handlers import FieldPanel, StreamFieldPanel
+from wagtail.admin.edit_handlers import FieldPanel, StreamFieldPanel, PageChooserPanel
 from wagtail.core.models import Page
 from wagtail.core.fields import StreamField
 
@@ -17,11 +17,12 @@ class FlexPage(Page):
             ('art_cards', blocks.ArtBlock()),
             ('cta', blocks.CTABlock()),
             ('large_jumbotron', blocks.LargeJumbotronBlock()),
+            ('navbar', blocks.NavbarBlock()),
+
         ],
         null=True,
         blank=True
     )
-
     page_title = models.CharField(max_length=100, blank=True, null=True)
 
     content_panels = Page.content_panels + [

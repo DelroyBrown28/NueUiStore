@@ -1,13 +1,38 @@
+from django.db import models
+
 from wagtail.core import blocks
 from wagtail.core.templatetags.wagtailcore_tags import richtext
 from wagtail.images.blocks import ImageChooserBlock
 
 
+
+class NavbarBlock(blocks.StructBlock):
+    nav_items = blocks.ListBlock(
+        blocks.StructBlock(
+            [
+                ('navbar_link_text_1', blocks.CharBlock(required=True, max_length=40, help_text="Name of Art Piece")),
+                ('navbar_link_1', blocks.PageChooserBlock(required=False)),
+                ('navbar_link_text_2', blocks.CharBlock(required=True, max_length=40, help_text="Name of Art Piece")),
+                ('navbar_link_2', blocks.PageChooserBlock(required=False)),
+                ('navbar_link_text_3', blocks.CharBlock(required=True, max_length=40, help_text="Name of Art Piece")),
+                ('navbar_link_3', blocks.PageChooserBlock(required=False)),
+
+            ]
+        )
+    )
+
+    class Meta:
+        template = 'blocks/navbar_block.html'
+        icon = "edit"
+        label = 'Navbar Options'
+
+
+
 class TitleAndTextBlock(blocks.StructBlock):
     """Title and text."""
 
-    title = blocks.CharBlock(required=True, help_text='Add a title')
-    text = blocks.TextBlock(required=True, help_text='Additional Text')
+    title = blocks.CharBlock(required=False, help_text='Add a title')
+    text = blocks.TextBlock(required=False, help_text='Additional Text')
 
     class Meta:
         template = 'blocks/title_and_text_block.html'
