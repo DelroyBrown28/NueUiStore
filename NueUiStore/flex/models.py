@@ -18,6 +18,7 @@ class FlexPage(Page):
             ('cta', blocks.CTABlock()),
             ('large_jumbotron', blocks.LargeJumbotronBlock()),
             ('navbar', blocks.NavbarBlock()),
+            ('exibition_dates', blocks.ExibitionDatesBlock()),
 
         ],
         null=True,

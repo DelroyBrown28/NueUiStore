@@ -70,6 +70,73 @@ html {
     background: #555;
 }
 
+
+
+/* 
+=====================
+EXIBITION DATES BLOCK
+=====================
+*/
+
+.exibition-dates-section {
+    padding: 0px 52px;
+    height: fit-content;
+    justify-content: space-evenly;
+}
+
+.exibition-wrap {
+    flex-flow: column;
+    /* width: 50%; */
+    justify-content: space-evenly;
+}
+
+.exibition-wrap h3 {
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 2.3rem;
+}
+
+.exibition-venue {
+    text-transform: uppercase;
+    font-weight: 200;
+    font-size: 2rem;
+    opacity: 0.7;
+}
+
+.exibition-date {
+    font-weight: 200;
+    font-size: 1.5rem;
+    opacity: 0.7;
+
+}
+
+
+
+
+/* 
+====================
+TITLE AND TEXT BLOCK
+====================
+*/
+
+.title-text-container {
+    flex-flow: column;
+}
+
+.title-text-title {
+    font-size: 5rem;
+    font-weight: 300;
+    font-family: 'Bebas Neue', cursive;
+}
+
+.title-text-richtext {
+    font-weight: 300;
+    text-align: center;
+    width: 85%;
+}
+
+
+
 /* 
 ======
 NAVBAR
@@ -228,6 +295,7 @@ ART CARD AREA
 
 .art-card-section {
     padding: 0px;
+    height: fit-content;
 }
 
 /* 

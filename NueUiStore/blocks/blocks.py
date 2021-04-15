@@ -32,7 +32,7 @@ class TitleAndTextBlock(blocks.StructBlock):
     """Title and text."""
 
     title = blocks.CharBlock(required=False, help_text='Add a title')
-    text = blocks.TextBlock(required=False, help_text='Additional Text')
+    text = blocks.RichTextBlock(required=False, help_text='Additional Text')
 
     class Meta:
         template = 'blocks/title_and_text_block.html'
@@ -103,3 +103,22 @@ class LargeJumbotronBlock(blocks.StructBlock):
         icon = 'image'
         label = 'Large Jumbotron'
 
+
+
+class ExibitionDatesBlock(blocks.StructBlock):
+    exibition_dates = blocks.ListBlock(
+        blocks.StructBlock(
+            [
+                ('city_or_town_location', blocks.CharBlock(required=True, max_length=40, help_text="Name of Art Piece")),
+                ('venue', blocks.CharBlock(required=True, max_length=40, help_text="Name of Art Piece")),
+                ('date', blocks.DateTimeBlock(required=True,help_text='The date of the show')),
+                ('buy_tickets', blocks.URLBlock(required=False)),
+
+            ]
+        )
+    )
+
+    class Meta:
+        template = 'blocks/exibition_dates_block.html'
+        icon = 'clock'
+        label = 'Date/Time'

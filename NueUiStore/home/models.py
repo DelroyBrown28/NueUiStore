@@ -56,6 +56,7 @@ class HomePage(Page):
             ('home_page_description', blocks.RichtextBlock()),
             ('home_page_background_image', blocks.ImageChooserBlock()),
             ('art_cards', blocks.ArtBlock()),
+            ('exibition_dates', blocks.ExibitionDatesBlock()),
 
 
         ],
