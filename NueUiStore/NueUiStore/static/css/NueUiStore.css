@@ -80,13 +80,17 @@ EXIBITION DATES BLOCK
 
 .exibition-dates-section {
     padding: 0px 52px;
-    height: fit-content;
+    height: 85vh;
+    /* overflow: auto; */
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
-.exibition-wrap {
+.exibition-cards {
     flex-flow: column;
-    /* width: 50%; */
+    width: 400px;
+    height: fit-content;
+
     justify-content: space-evenly;
 }
 
@@ -490,6 +494,9 @@ HOVERS AND KEYFRAMES
 }
 
 @media (max-width: 450px) {
+
+ 
+
     .artist-feature-section {
         padding: 0px;
     }
@@ -522,5 +529,11 @@ HOVERS AND KEYFRAMES
         text-align: center;
         width: 90%;
 
+    }
+
+
+
+    .exibition-cards {
+        margin-top: 25px;
     }
 }
