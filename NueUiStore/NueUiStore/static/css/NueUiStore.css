@@ -79,17 +79,34 @@ EXIBITION DATES BLOCK
 */
 
 .exibition-dates-section {
+    position: relative;
     padding: 0px 52px;
-    height: 85vh;
-    /* overflow: auto; */
+    margin: 0px 52px;
+    height: 65vh;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    overflow: auto;
+
+    background-color: #f7f7f7;
+}
+
+.exibition-section-title {
+    position: absolute;
+    text-align: center;
+    color: #222;
+    top: 25px;
+    margin-bottom: 25px;
+    font-size: 2rem;
+    font-weight: 300;
+    border-bottom: 2px dashed #222;
+
 }
 
 .exibition-cards {
     flex-flow: column;
     width: 400px;
     height: fit-content;
+    color: #222;
 
     justify-content: space-evenly;
 }
@@ -112,6 +129,11 @@ EXIBITION DATES BLOCK
     font-size: 1.5rem;
     opacity: 0.7;
 
+}
+
+.exibition-btn {
+    border: 1px dashed #222;
+    color: #222;
 }
 
 

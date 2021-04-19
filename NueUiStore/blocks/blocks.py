@@ -106,6 +106,7 @@ class LargeJumbotronBlock(blocks.StructBlock):
 
 
 class ExibitionDatesBlock(blocks.StructBlock):
+    exibition_section_title = blocks.CharBlock(required=True, max_length=100)
     exibition_dates = blocks.ListBlock(
         blocks.StructBlock(
             [
